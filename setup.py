@@ -9,14 +9,14 @@ from distutils.core import setup
 setup(
   name = 'SpectralEmbeddings',         
   packages = ['SpectralEmbeddings'],   
-  version = '0.1',       
+  version = '0.2',       
   license='MIT',        
   description = 'A Spectral Embedding library made of Graph Convolution Networks and AutoEncoders',   
   long_description='This is a library used for generating semantic embeddings from Graph Convolution variants such as Chebscev polynomials and AutoEncoders. The embeddings generated are based on deep geaph networks which use spectral convolution kernel made with Tensorflow. This package implements AutoEncoder based embeddings as well as GCN variants',
   author = 'ABHILASH MAJUMDER',
   author_email = 'debabhi1396@gmail.com',
   url = 'https://github.com/abhilash1910/SpectralEmbeddings',   
-  download_url = 'https://github.com/abhilash1910/SpectralEmbeddings/archive/v_01.tar.gz',    
+  download_url = 'https://github.com/abhilash1910/SpectralEmbeddings/archive/v_02.tar.gz',    
   keywords = ['Semantic Embeddings','Graph Convolution Network','Chebyshev networks','Higher order Graph embeddings','Graph Autoencoder networks','SDNE embeddings','Tensorflow'],   
   install_requires=[           
 
