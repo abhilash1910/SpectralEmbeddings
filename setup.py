@@ -26,7 +26,8 @@ setup(
           'sklearn',
           'pandas',
           'networkx'
-          'scipy'
+          'scipy',
+          'plotly'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      

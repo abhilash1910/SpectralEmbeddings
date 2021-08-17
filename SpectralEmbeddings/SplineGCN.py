@@ -71,6 +71,7 @@ class GraphConvolution(tf.keras.layers.Layer):  # ReLU(AXW)
 
         base_config = super(GraphConvolution, self).get_config()
         return dict(list(base_config.items()) + list(config.items()))
+    
 
 
 def GCN(adj_dim,feature_dim,n_hidden, num_class, num_layers,activation=tf.nn.relu,dropout_rate=0.5, l2_reg=0 ):
@@ -164,7 +165,7 @@ def get_splinegcn_embeddings(hidden_units,train_df_temp,source_label,target_labe
     
     embedding_weights = model.predict(model_input)
     print(f"Dimensions of embeddings {embedding_weights.shape}")
-    return embedding_weights
+    return embedding_weights,graph
     
 def get_node_embedding(node,embedding_weights):
     try:
@@ -173,7 +174,19 @@ def get_node_embedding(node,embedding_weights):
     except:
         print(f"Value of node should be in between 0 and {embedding_weights.shape[0]}")
 
-
+def node_level_embedding(graph,node,embed):
+        print("Determining the Chebyshev distance between node and rest of the node embeddings")
+        embed_node=embed[node]
+        vals=list(graph.nodes())
+        def chebyshev_distance(node1,node2):
+            return scipy.spatial.distance.chebyshev(node1,node2)
+        distances=[]
+        questions=[]
+        for i in range(graph.number_of_nodes()):
+            if i!=node:
+                distances.append(chebyshev_distance(embed_node,embed[i]))
+                questions.append(vals[i])
+        return vals[node],distances,questions
 
 
 

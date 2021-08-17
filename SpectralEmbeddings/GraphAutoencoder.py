@@ -27,7 +27,7 @@ class Loss():
             return self.alpha * 2 * tf.linalg.trace(tf.matmul(tf.matmul(Y, L, transpose_a=True), Y)) / batch_size
         return cal
 
-class SDNE():
+class AutoEncoder():
     def __init__(self,graph,alpha,beta,hidden_dims,epochs):
         self.graph=graph
         self.alpha=alpha
@@ -86,19 +86,20 @@ class SDNE():
             self.embeddings.append(emb)
         return self.embeddings   
     
-    def node_level_embedding(self,node,embed):
-        logging.info("Determining the Chebyshev distance between node and rest of the node embeddings")
-        embed_node=embed[node]
-        vals=list(self.graph.nodes())
-        def chebyshev_distance(node1,node2):
-            return scipy.spatial.distance.chebyshev(node1,node2)
-        distances=[]
-        questions=[]
-        for i in range(self.graph.number_of_nodes()):
-            if i!=node:
-                distances.append(chebyshev_distance(embed_node,embed[i]))
-                questions.append(vals[i])
-        return vals[node],distances,questions
+def node_level_embedding(graph,node,embed):
+    print("Determining the Chebyshev distance between node and rest of the node embeddings")
+    embed_node=embed[node]
+    vals=list(graph.nodes())
+    def chebyshev_distance(node1,node2):
+        return scipy.spatial.distance.chebyshev(node1,node2)
+    distances=[]
+    questions=[]
+    for i in range(graph.number_of_nodes()):
+        if i!=node:
+            distances.append(chebyshev_distance(embed_node,embed[i]))
+            questions.append(vals[i])
+    return vals[node],distances,questions
+
 
 def get_sdne_embeddings(train_df,source_label,target_label,hidden_dims,alpha,beta,epochs):
     g=nx.from_pandas_edgelist(train_df,source=source_label,target=target_label)
@@ -106,15 +107,9 @@ def get_sdne_embeddings(train_df,source_label,target_label,hidden_dims,alpha,bet
     #hidden_dims=[32,16]
     #alpha=1e-4
     #beta=1e-5
-    sdne=SDNE(g,alpha,beta,hidden_dims,epochs)
-    sdne.model()
-    emb=sdne.get_embeddings()
-
-    #node_num=339
-    #node,distances,questions=sdne.node_level_embedding(node_num,emb)
-    #sdne_df=pd.DataFrame(columns=['Question','Sample_Question','Chebyshev_Distance'])
-    #sdne_df['Question']=[node]*len(distances)
-    #sdne_df['Sample_Question']=questions
-    #sdne_df['Chebyshev_Distance']=distances
-    return emb
+    graph_ae=AutoEncoder(g,alpha,beta,hidden_dims,epochs)
+    graph_ae.model()
+    emb=graph_ae.get_embeddings()
+    
+    return emb,g
     
