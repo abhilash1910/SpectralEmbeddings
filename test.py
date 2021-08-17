@@ -227,7 +227,7 @@ if __name__=='__main__':
         node_num=s_graph.number_of_node()-1    
     label="Spline GCN Chebshev similarity"
     c_g=plot_sgcn_embed(s_graph,node_num,embed_wt_spline,label)
-    #pyvis_plotter(c_g,'SplineGCN')
+    pyvis_plotter(s_graph,'SplineGCN')
     
     
     print("======Graph AutoEncoder========")
