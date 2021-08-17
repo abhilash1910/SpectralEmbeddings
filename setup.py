@@ -25,7 +25,7 @@ setup(
           'keras',
           'sklearn',
           'pandas',
-          'networkx'
+          'networkx',
           'scipy',
           'plotly'
       ],
