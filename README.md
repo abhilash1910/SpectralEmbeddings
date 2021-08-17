@@ -20,7 +20,7 @@ This is a embedding generator library used for creating Graph Convolution Networ
 
    <img src="https://miro.medium.com/max/875/1*THVRB8-wHODA3yDUykasIg.png">
 
-   ![img2](Previews/Vanilla_GCN_preview.PNG)
+   ![img2](Previews/Vanilla_GCN_preview_1.PNG)
 
   - SplineGCN: Spline GCN involve computing smooth spectral filters to get localized spatial filters. The connection between smoothness in frequency domain and localization in space is based on Parseval’s Identity (also Heisenberg uncertainty principle): smaller derivative of spectral filter (smoother function) ~ smaller variance of spatial filter (localization) In this case, we wrap the vanilla GCN with an additional spline functionality by decomposing the laplacian to its diagonals (1-spline) . This represents the eigenvectors which can be added independently instead of taking the entire laplacian at one time. The rest of the code segment remains the same.
 
