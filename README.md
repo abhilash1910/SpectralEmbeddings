@@ -239,6 +239,8 @@ In the next cells, we see the example script for this library as mentioned in th
 
 [Colab](https://colab.research.google.com/drive/1MjykaLarkHKxqs2QjlmK-PI_Itpw-oV4#scrollTo=_xu7kHPQDDlX)
 
+[Kaggle](https://www.kaggle.com/abhilash1910/spectralembeddings?scriptVersionId=72130689)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
