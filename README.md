@@ -3,6 +3,8 @@
 
 ## A Spectral Embedding library made of Graph Convolution Networks and AutoEncoders :robot:
 
+![img1](Previews/Graph_preview.PNG)
+
 
 This is a embedding generator library used for creating Graph Convolution Network, and Graoh Autoencoder embeddings from Knowledge Graphs. This allows projection of higher order network dependencies for creating the node embeddings with respect to a neighborhood. There are 2 different approaches: 
 
