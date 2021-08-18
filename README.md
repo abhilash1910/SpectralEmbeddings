@@ -107,7 +107,7 @@ pip install SpectralEmbeddings==0.1
       vg_g=nx.from_pandas_edgelist(vg_df,source='Hypothesis',target='Premise',edge_attr='Chebyshev_Distance')
       plotter(vg_g,label)
       return vg_g
-    ```
+   ```
   Alternately the 'pyvis_plotter' method can also be used which uses the [pyvis library](https://pyvis.readthedocs.io/). Thus the only requirement for creating autoencoder based node representations is a dataframe containing source and target columns both of which should be in textual format.
 
 
