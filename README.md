@@ -64,9 +64,10 @@ Installation is carried out using the pip command as follows:
 pip install SpectralEmbeddings==0.1
 ```
 
-## SpectralEmbeddings
+This library is built with Tensorflow:
 
-<img src="https://github.com/abhilash1910/SpectralEmbeddings/raw/master/Previews/Graph_preview.PNG">
+<img src="https://media.wired.com/photos/5955aeeead90646d424bb349/master/pass/google-tensor-flow-logo-black-S.jpg">
+
 
 [Spectral Embeddings](https://github.com/abhilash1910/SpectralEmbeddings) is a [python package](https://pypi.org/project/SpectralEmbeddings/0.2) which is used to generate embeddings from knowledge graphs with the help of deep graph convolution kernels and autoencoder networks. This library is used to generate 2 different kinds embeddings:
 
