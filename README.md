@@ -6,7 +6,7 @@
 ![img1](Previews/Graph_preview.PNG)
 
 
-This is a embedding generator library used for creating Graph Convolution Network, and Graoh Autoencoder embeddings from Knowledge Graphs. This allows projection of higher order network dependencies for creating the node embeddings with respect to a neighborhood. There are 2 different approaches: 
+This is a embedding generator library used for creating Graph Convolution Network, and Graph Autoencoder embeddings from Knowledge Graphs. This allows projection of higher order network dependencies for creating the node embeddings with respect to a neighborhood. There are 2 different approaches: 
 
 - Graph AutoEncoder Approach: This models the first and higher order similarity measures in a graph for each node in a neighborhood. The first and second order similarity measures are created through an Autoencoder circuit which preserves the proximity loss of similarity with reconstruction loss.
 
@@ -31,7 +31,7 @@ This is a embedding generator library used for creating Graph Convolution Networ
   ![img3](Previews/Spline_GCN_preview.PNG)
 
 
-  - ChebGCN: This is one of the most important parts of spectral GCN where Chebyshev polynomials are used instead of the laplacian. ChebNets are GCNs that can be used for any arbitrary graph domain, but the limitation is that they are isotropic. Standard ConvNets produce anisotropic filters because Euclidean grids have direction, while Spectral GCNs compute isotropic filters since graphs have no notion of direction (up, down, left, right).
+  - ChebGCN: This is one of the most important part of spectral GCN where Chebyshev polynomials are used instead of the laplacian. ChebNets are GCNs that can be used for any arbitrary graph domain, but the limitation is that they are isotropic. Standard ConvNets produce anisotropic filters because Euclidean grids have direction, while Spectral GCNs compute isotropic filters since graphs have no notion of direction (up, down, left, right).
 
   <img src="https://atcold.github.io/pytorch-Deep-Learning/images/week13/13-2/Figure2.png">
 
@@ -230,7 +230,7 @@ import SpectralEmbeddings.SplineGCN as sgcn
 import SpectralEmbeddings.GraphAutoencoder as graph_ae
 ```
 
-In the next cells, we see the example script for this library as mentioned in this writeup.
+
 
 <img src="https://camo.githubusercontent.com/627c7b5447bd93dcc191ea19ade3b10d913e06d3ca4dd18259fb8fd79deb11d4/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313833382f312a2d2d443174444d6a59577766316d76385a59526f37412e706e67">
 
