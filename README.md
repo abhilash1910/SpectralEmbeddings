@@ -242,6 +242,8 @@ import SpectralEmbeddings.GraphAutoencoder as graph_ae
 
 [Kaggle](https://www.kaggle.com/abhilash1910/spectralembeddings?scriptVersionId=72130689)
 
+For Graph Attention Networks Embeddings please refer to the repository here:[GAT](https://github.com/abhilash1910/GraphAttentionNetworks)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
