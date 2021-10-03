@@ -248,3 +248,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 MIT
+
+## Support
+
+If you like my work  and would like to support me , please consider buying my a cup of [coffee](https://www.buymeacoffee.com/abhilash1910) :smile:
