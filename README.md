@@ -241,6 +241,12 @@ In the next cells, we see the example script for this library as mentioned in th
 
 [Kaggle](https://www.kaggle.com/abhilash1910/spectralembeddings?scriptVersionId=72130689)
 
+
+## Analogous work
+
+A similar architecture has been employed to create the "GraphAttentionNetworks" embeddings , which provides a GAT layer for extracting KG embeddings as well as a fully trainable Tensorflow layer which can be added to any neural module. Please refer to this repository for the [details](https://github.com/abhilash1910/GraphAttentionNetworks). The library can be found at [Pypi](https://pypi.org/project/GraphAttentionNetworks/0.1/).
+
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
